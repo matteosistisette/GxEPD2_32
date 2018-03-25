@@ -581,7 +581,7 @@ void GxEPD2_32_3C_X::_waitWhileBusy(const char* comment)
   {
     if (digitalRead(_busy) != _busy_active_level) break;
     delay(1);
-    if (micros() - start > 20000000) // >14.9s !
+    if (micros() - start > 40000000) // >32.6s !
     {
       Serial.println("Busy Timeout!");
       break;
